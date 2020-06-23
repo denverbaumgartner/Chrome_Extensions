@@ -1,15 +1,27 @@
 {
-    "name": "Aspin Chrome Extension",
-    "version": "1.0",
-    "description": "An extension aide users in organizing research and writing",
+  "manifest_version": 2,
+  "name": "Aspin Chrome Extension",
+  "version": "1.0",
+  "description": "An extension aide users in organizing research and writing",
 
-    "background": {
-      "scripts": ["background.js"], 
-      "persistent": true
-    },
+  "icons": {
+    "16": "icons/get_started16.png",
+    "48": "icons/get_started48.png",
+    "128": "icons/get_started128.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/get_started16.png",
+    "default_popup": "popup.html"
+  },
 
-    "permissions": [
-      "storage"
-    ],
-    "manifest_version": 2
+  "background": {
+    "scripts": ["highLight_Event.js"], 
+    "persistent": false
+  },
+
+  "permissions": [
+    "storage", 
+    "contextMenus"
+  ]
+    
   }

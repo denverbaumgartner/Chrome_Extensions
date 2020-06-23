@@ -4,7 +4,9 @@ var contextMenuItem = {
     // the situation in which this will appear - selection will be when text is selected 
     "contexts": ["selection"]
 };
-chrome.contextMenus.create(contextMenuItem);
+chrome.runtime.onInstalled.addListener(function() {
+    chrome.contextMenus.create(contextMenuItem);
+});
 
 function isInt(value) {
     return !isNaN(value) &&
@@ -35,4 +37,8 @@ chrome.contextMenus.onClicked.addListener(function(clickData){
             });
         }
     }
+});
+
+chrome.storage.onChanged.addListener(function(changes, storageName){
+    chrome.browserAction.setBadgeText({"text": changes.total.newValue.toString()});
 });
