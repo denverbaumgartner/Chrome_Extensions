@@ -19,6 +19,15 @@
     "persistent": false
   },
 
+  "commands": {
+    "save_function": {
+      "suggested_keys": {
+        "default": "Ctrl+i", 
+        "mac": "Command+i"
+      }
+    }
+  },
+
   "permissions": [
     "storage", 
     "contextMenus"

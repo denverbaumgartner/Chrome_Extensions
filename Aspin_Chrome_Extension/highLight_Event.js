@@ -14,3 +14,12 @@ chrome.contextMenus.onClicked.addListener(function(clickData){
 
     };
 });
+
+// function to save highlighted section using hotkey 
+chrome.commands.onCommand.addListener( function(command){
+    // check to see if text is highlighted and if the hotkey has been selected
+    if (command === "save_function" && clickData.selectionText){
+        // load the user menu
+        
+    };
+});
